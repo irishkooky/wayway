@@ -1,0 +1,87 @@
+body {
+  background: #111;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+}
+
+main {
+  width: 300px;
+  padding: 36px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+}
+
+.panel {
+  text-align: center;
+}
+
+.panel img {
+  height: 110px;
+  margin-bottom: 16px;
+}
+
+#status {
+  height: 32px;
+  background: #7D18CF;
+  border-radius: 16px;
+  line-height: 32px;
+  text-align: center;
+  font-size: 14px;
+  color: #fff;
+  user-select: none;
+  margin-bottom: 16px;
+}
+
+#spin {
+  cursor: pointer;
+  width: 280px;
+  height: 36px;
+  background: #ec6f00;
+  border-radius: 18px;
+  line-height: 36px;
+  text-align: center;
+  color: #fff;
+  user-select: none;
+  margin: 0 auto 16px;
+}
+#draw-card {
+  cursor: pointer;
+  width: 280px;
+  height: 36px;
+  background: #2DD63E;
+  border-radius: 18px;
+  line-height: 36px;
+  text-align: center;
+  color: #fff;
+  user-select: none;
+  margin: 0 auto;
+}
+
+.unmatched {
+  opacity: 0.5;
+}
+
+.slidein {
+  animation: slideIn .8s cubic-bezier(0.25, 1, 0.5, 1) 1 forwards;
+}
+@keyframes slideIn {
+  0% {
+    transform: translateY(-1200px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+  }
+  40%,100% {
+    opacity: 1;
+  }
+}
+
+.bg-white {
+  background-color: #fff;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+}
