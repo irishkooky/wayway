@@ -68,7 +68,7 @@
     }
     getNumbers() {
       if (this.spinStop.classList.contains('stop')) {
-        const filename = this.img.src.match(/([^/]*)\./)[1];
+        const filename = this.img.src.split('/').reverse()[0].split('.')[0];
         this.status.textContent = filename + '！';
       }
     }
