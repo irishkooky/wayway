@@ -39,17 +39,39 @@
         this.cardChoice.classList.remove('hidden');
         this.cardChoice.classList.add('slidein', 'choice-card');
         main.classList.add('hidden');
+        clearTimeout(this.timeoutId);
+        this.spinStop.classList.remove('inactive');
+        this.spinStop.classList.add('stop');
+        this.spinStop.textContent = 'もういちどふる';
+        this.getNumbers();
       });
 
-      // カードを引いてね画面
-      // this.choiceCard = document.createElement('div');
+      this.modal = document.getElementById('modal');
+      this.mask = document.getElementById('mask');
+      this.open = document.getElementsByClassName('open');
+      this.close = document.getElementById('close');
+      for(let i = 0; i < this.open.length; i++) {
+        this.open[i].addEventListener('click', () => {
+          this.modal.classList.remove('hidden');
+          this.mask.classList.remove('hidden');
+        });
+      };
+
+      this.close.addEventListener('click', () => {
+        this.modal.classList.add('hidden');
+        this.mask.classList.add('hidden');
+        this.cardChoice.classList.add('hidden');
+        main.classList.remove('hidden');
+        this.spinStop.classList.remove('stop');
+        this.spinStop.classList.add('inactive');
+        this.spin();
+        this.spinStop.textContent = 'ストップ';
+      });
 
       section.appendChild(this.status);
       section.appendChild(this.img);
       section.appendChild(this.spinStop);
       section.appendChild(this.drawCard);
-
-      // drawCard.appendChild(section);
 
       const main = document.querySelector('main');
       main.appendChild(section);

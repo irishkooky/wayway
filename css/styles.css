@@ -34,8 +34,33 @@ main {
   user-select: none;
   margin-bottom: 16px;
 }
+.status {
+  width: 70px;
+  height: 32px;
+  background: #7D18CF;
+  border-radius: 4px;
+  line-height: 32px;
+  text-align: center;
+  font-size: 14px;
+  color: #fff;
+  user-select: none;
+  margin-bottom: 16px;
+  margin: 16px auto;
+}
 
 #spin {
+  cursor: pointer;
+  width: 280px;
+  height: 36px;
+  background: #ec6f00;
+  border-radius: 18px;
+  line-height: 36px;
+  text-align: center;
+  color: #fff;
+  user-select: none;
+  margin: 0 auto 16px;
+}
+.spin {
   cursor: pointer;
   width: 280px;
   height: 36px;
@@ -118,3 +143,26 @@ main {
 .w-full {width: 100%;}
 .w-70per {width: 70%;}
 .w-55per {width: 55%;}
+.w-90per {width: 90%;}
+
+#modal {
+  padding: 20px;
+  border-radius: 4px;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  transition: transform 0.4s;
+  z-index: 2;
+}
+#mask {
+  background: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 1;
+}
+.ta-c {text-align: center;}
