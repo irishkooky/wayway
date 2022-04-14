@@ -80,9 +80,41 @@ main {
   }
 }
 
-.bg-white {
-  background-color: #fff;
-  width: 100vw;
+.choice-card {
+  background: #111;
   height: 100vh;
-  position: absolute;
+  /* position: absolute; */
+  padding: 36px;
+  border-radius: 12px;
+  justify-content: center;
+  margin: 0 auto;
+  text-align: center;
 }
+
+.red {
+  color: #ec6f00;
+}
+.hidden {display: none;}
+.h-110 {height: 110px;}
+.w-20per {width: 20%;}
+.ul {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+.ul li {
+  width: 23%;
+}
+.ul li img {
+  width: 100%;
+}
+.justify {
+  justify-content: center;
+}
+.mt-24 {margin-top:24px;}
+.mr-7 {
+  margin-right: 7px;
+}
+.w-full {width: 100%;}
+.w-70per {width: 70%;}
+.w-55per {width: 55%;}

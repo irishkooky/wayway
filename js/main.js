@@ -36,13 +36,20 @@
       this.drawCard.textContent = 'カードをひく';
       this.cardChoice = document.getElementById('card-choice')
       this.drawCard.addEventListener('click', () => {
-        this.cardChoice.classList.add('slidein', 'bg-white');
+        this.cardChoice.classList.remove('hidden');
+        this.cardChoice.classList.add('slidein', 'choice-card');
+        main.classList.add('hidden');
       });
+
+      // カードを引いてね画面
+      // this.choiceCard = document.createElement('div');
 
       section.appendChild(this.status);
       section.appendChild(this.img);
       section.appendChild(this.spinStop);
       section.appendChild(this.drawCard);
+
+      // drawCard.appendChild(section);
 
       const main = document.querySelector('main');
       main.appendChild(section);
