@@ -57,6 +57,15 @@
         });
       };
 
+      this.return = document.getElementById('return');
+      this.return.addEventListener('click', () => {
+        this.modal.classList.add('hidden');
+        this.mask.classList.add('hidden');
+        this.cardChoice.classList.add('hidden');
+        main.classList.remove('hidden');
+        this.status.textContent = 'ストップボタンをおしてね';
+      });
+
       this.close.addEventListener('click', () => {
         this.modal.classList.add('hidden');
         this.mask.classList.add('hidden');
@@ -100,9 +109,6 @@
         const filename = this.img.src.split('/').reverse()[0].split('.')[0];
         this.status.textContent = filename + '！';
       }
-    }
-    getCard() {
-      
     }
   }
   new Panel();
